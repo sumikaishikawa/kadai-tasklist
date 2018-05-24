@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Requests;
+
+use App\Task;
+
 class TasksController extends Controller
 {
     /**
@@ -27,10 +31,10 @@ class TasksController extends Controller
      */
     public function create()
     {
-        $message = new Message;
+        $task = new Task;
 
         return view('tasks.create', [
-            'message' => $message,
+            'task' => $task,
         ]);
     }
 
@@ -42,9 +46,9 @@ class TasksController extends Controller
      */
     public function store(Request $request)
     {
-        $message = new Message;
-        $message->content = $request->content;
-        $message->save();
+        $task = new Task;
+        $task->content = $request->content;
+        $task->save();
 
         return redirect('/');
     }
@@ -72,10 +76,10 @@ class TasksController extends Controller
      */
     public function edit($id)
     {
-        $message = Message::find($id);
+        $task = Task::find($id);
 
         return view('tasks.edit', [
-            'message' => $message,
+            'task' => $task,
         ]);
     }
 
@@ -88,9 +92,9 @@ class TasksController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $message = Message::find($id);
-        $message->content = $request->content;
-        $message->save();
+        $task = Task::find($id);
+        $task->content = $request->content;
+        $task->save();
 
         return redirect('/');
     }
@@ -103,8 +107,8 @@ class TasksController extends Controller
      */
     public function destroy($id)
     {
-        $message = Message::find($id);
-        $message->delete();
+        $task = Task::find($id);
+        $task->delete();
 
         return redirect('/');
     }
