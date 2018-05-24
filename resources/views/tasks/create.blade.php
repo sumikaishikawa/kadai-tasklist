@@ -1,10 +1,10 @@
-@extends ('layouts.app')
+@extends('layouts.app')
 
-@section ('content')
+@section('content')
 
-  <h1>メッセージ新規作成ページ</h1>
+   <h1>メッセージ新規作成ページ</h1>
 
-    {!! Form::model($message, ['route' => 'messages.store']) !!}
+    {!! Form::model($message, ['route' => 'tasks.store']) !!}
 
         {!! Form::label('content', 'メッセージ:') !!}
         {!! Form::text('content') !!}
@@ -12,5 +12,5 @@
         {!! Form::submit('投稿') !!}
 
     {!! Form::close() !!}
-
+   
 @endsection
