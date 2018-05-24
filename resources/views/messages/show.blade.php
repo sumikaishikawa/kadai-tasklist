@@ -1,6 +1,6 @@
-@extends（ 'layouts.app'）
+@extends ('layouts.app')
 
-@section（ 'content'）
+@section ('content')
 
    <h1>id = {{ $message->id }} のメッセージ詳細ページ</h1>
 

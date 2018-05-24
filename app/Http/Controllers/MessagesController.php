@@ -20,7 +20,7 @@ class MessagesController extends Controller
         $messages = Message::all();
 
         return view('messages.index', [
-            'test' => $messages,
+            'messages' => $messages,
         ]);
     }
 

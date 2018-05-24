@@ -1,6 +1,6 @@
-@extends（ 'layouts.app'）
+@extends('layouts.app')
 
-@section（ 'content'）
+@section('content')
 
   <h1>メッセージ一覧</h1>
 
@@ -11,5 +11,5 @@
             @endforeach
         </ul>
     @endif
-  {!! link_to_route('messages.create', '新規メッセージの投稿') !!}
+      {!! link_to_route('messages.create', '新規メッセージの投稿') !!}
 @endsection

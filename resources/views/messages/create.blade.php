@@ -1,6 +1,6 @@
-@extends（ 'layouts.app'）
+@extends ('layouts.app')
 
-@section（ 'content'）
+@section ('content')
 
   <h1>メッセージ新規作成ページ</h1>
 
